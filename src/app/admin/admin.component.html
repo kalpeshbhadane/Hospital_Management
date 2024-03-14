@@ -1,1 +1,24 @@
-<p>admin works!</p>
+<!-- dashboard.component.html -->
+
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Dashboard</span>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="over">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/dashboard', 'patient']">Patients</a>
+        <a mat-list-item [routerLink]="['/dashboard', 'doctor']">Doctors</a>
+        <a mat-list-item [routerLink]="['/dashboard', 'drug']">Drugs</a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <!-- Placeholder for forms -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

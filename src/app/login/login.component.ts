@@ -34,9 +34,9 @@ export class LoginComponent  implements AfterViewInit{
       (data: UserRoleResponse) => {
         console.log(data);
         if (data.role === 'A') {
-          this.router.navigate(['/admin']);
+          this.router.navigateByUrl('admin');
         } else if (data.role === 'D') {
-          this.router.navigate(['/doctor']);
+          this.router.navigateByUrl('doctor');
         } else {
           this.showErrorMessage = true;
           setTimeout(() => {

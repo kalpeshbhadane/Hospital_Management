@@ -5,10 +5,10 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'doctor', component: DoctorComponent },
   { path: 'admin', component: AdminComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   // Add more routes as needed
   { path: '**', redirectTo: '/login' }
 ];
